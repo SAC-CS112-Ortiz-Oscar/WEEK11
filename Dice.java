@@ -59,3 +59,5 @@ public class Dice
 	int index;
 	private int history[] = new int[size];
 }
+
+// Hi Oscar:  1.  Move the member variable to top of class per convention.  2.  Please try to implement toString method.  Good job.
