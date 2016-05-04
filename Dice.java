@@ -2,6 +2,13 @@
 
 public class Dice 
 {
+	int size = 20;
+	int logicalSize = 0;
+	private int upperBound;
+	private int numberOfThrows;
+	int index;
+	private int history[] = new int[size];
+	
 	Dice()
 	{
 		upperBound = 6;
@@ -30,14 +37,16 @@ public class Dice
 	
 	public void printNumberOfThrows()
 	{
-		System.out.printf("Total # of throws: \n%d\n", numberOfThrows);
+		String number = Integer.toString(numberOfThrows);
+		System.out.print("Total # of throws: " + number + "\n");
 	}
 	public void printHistory()
 	{
 		System.out.println("Dice roll history:");
 		for(int printIndex = 0; printIndex < logicalSize; printIndex++)
 		{
-			System.out.print(history[printIndex]+ "\n");
+			String number = Integer.toString(history[printIndex]);
+			System.out.print(number + "\n");
 		}
 	}
 	
@@ -50,14 +59,7 @@ public class Dice
 	{
 		history[index] = diceRoll;
 	}
-	
-
-	int size = 20;
-	int logicalSize = 0;
-	private int upperBound;
-	private int numberOfThrows;
-	int index;
-	private int history[] = new int[size];
 }
 
 // Hi Oscar:  1.  Move the member variable to top of class per convention.  2.  Please try to implement toString method.  Good job.
+// Done. 5/4/16.
